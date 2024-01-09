@@ -1,0 +1,3 @@
+/home/cobr3x/C++/Monopoly Test/CMakeFiles/monopoly.dir
+/home/cobr3x/C++/Monopoly Test/CMakeFiles/edit_cache.dir
+/home/cobr3x/C++/Monopoly Test/CMakeFiles/rebuild_cache.dir
