@@ -64,12 +64,14 @@ namespace monopoly
 			
 			bool is_angular_box(int position);
 			
+			Box* get_box(int position);
+			
+			static constexpr int MAX_SIZE = 28; //must be divisible by 4
+			static constexpr int START = 0;
+			
 			private:
 				std::vector<Box*> gameboard_;
 				std::vector<Player*> player_;
-				
-				static constexpr int MAX_SIZE = 28; //must be divisible by 4
-				static constexpr int START = 0;
 				
 				static constexpr int ECONOMY = 8;
 				static constexpr int STANDARD = 10;
