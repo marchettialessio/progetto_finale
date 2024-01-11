@@ -125,9 +125,14 @@ namespace monopoly
 	
 	void GameBoard::show() const {}
 	
-	bool GameBoard::is_angular_box(int position)
+	bool GameBoard::is_angular_box(int position) const
 	{
 		return position == 0 || (position % (MAX_SIZE/4) == 0);
+	}
+	
+	Box* GameBoard::get_box(int position)
+	{
+		return gameboard_.at(position); //if position is out_of_range throw out_of_range_exception
 	}
 	
 	std::ostream& operator<<(std::ostream& out, const GameBoard& other)
@@ -135,4 +140,3 @@ namespace monopoly
 		return out << "";
 	} 
 }
-
