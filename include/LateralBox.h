@@ -85,7 +85,14 @@ namespace monopoly
 			
 			void clear(); // starting game setting
 			
-			bool is_for_sale() { return owner_ == nullptr; }
+			bool is_for_sale() const { return owner_ == nullptr; }
+			
+			bool has_last_upgrade() const;
+			
+			bool is_box_owner(const Player* player) const;
+			
+			bool stay(Player* player); //return true if building_ is Building::house or Building::hotel and the payment is possible, false instead
+			
 			
 			std::string show_box() const override;
 			
@@ -94,6 +101,15 @@ namespace monopoly
 			Building building_;
 			
 			std::vector<int> price_;
+			
+			const std::vector<int> ECONOMY_PRICE = {6,3,3,2,4};
+			const std::vector<int> STANDARD_PRICE = {10,5,5,4,8};
+			const std::vector<int> LUXURY_PRICE = {20,10,10,7,14};
+			
+			/**
+			* 	enumeration of prices category.
+			*/
+			enum class Price {lot_price = 0, house_price = 1, hotel_price = 2, house_stay = 3, hotel_stay = 4};
 			
 			Player* owner_;
 
