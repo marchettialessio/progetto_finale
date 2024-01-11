@@ -62,7 +62,7 @@ namespace monopoly
 			
 			void show() const;
 			
-			bool is_angular_box(int position);
+			bool is_angular_box(int position) const;
 			
 			Box* get_box(int position);
 			
