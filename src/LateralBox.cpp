@@ -9,15 +9,15 @@ namespace monopoly
 		switch(category)
 		{
 			case Category::economy:
-				price_ = {6,3,3,2,4};
+				price_ = ECONOMY_PRICE;
 				break;
 			
 			case Category::standard:
-				price_ = {10,5,5,4,8};
+				price_ = STANDARD_PRICE;
 				break;
 			
 			case Category::luxury:
-				price_ = {20,10,10,7,14};
+				price_ = LUXURY_PRICE;
 				break;
 		}
 	}
@@ -28,15 +28,15 @@ namespace monopoly
 		switch(category)
 		{
 			case Category::economy:
-				price_ = {6,3,3,2,4};
+				price_ = ECONOMY_PRICE;
 				break;
 			
 			case Category::standard:
-				price_ = {10,5,5,4,8};
+				price_ = STANDARD_PRICE;
 				break;
 			
 			case Category::luxury:
-				price_ = {20,10,10,7,14};
+				price_ = LUXURY_PRICE;
 				break;
 		}
 	}
@@ -58,10 +58,10 @@ namespace monopoly
 	
 	bool LateralBox::sell(Player* owner)
 	{				
-		if(owner != nullptr && owner->decrease_balance(price_[0]))
+		if(owner != nullptr && owner->decrease_balance(price_[(int) Price::lot_price]))
 		{
 			if(owner_ != nullptr)
-				owner_->increment_balance(price_[0]);
+				owner_->increment_balance(price_[(int) Price::lot_price]);
 			
 			owner_ = owner;	
 			return true;
@@ -80,14 +80,14 @@ namespace monopoly
 		switch(building_)
 		{
 			case Building::none:
-				if(!owner_->decrease_balance(price_[1]))
+				if(!owner_->decrease_balance(price_[(int) Price::house_price]))
 					return false;
 					
 				building_ = LateralBox::Building::house;
 				break;
 			
 			case Building::house:
-				if(!owner_->decrease_balance(price_[2]))
+				if(!owner_->decrease_balance(price_[(int) Price::hotel_price]))
 					return false;
 					
 				building_ = LateralBox::Building::hotel;
@@ -118,6 +118,43 @@ namespace monopoly
 		}
 		
 		return building;
+	}
+	
+	bool LateralBox::has_last_upgrade() const
+	{
+		return building_ == LateralBox::Building::hotel;
+	}
+	
+	bool LateralBox::is_box_owner(const Player* player) const
+	{
+		return owner_ == player;
+	}
+	
+	bool LateralBox::stay(Player* player)
+	{
+		if(player == nullptr || owner_ == nullptr)
+		{
+			return false;
+		}
+		
+		switch(building_)
+		{
+			case Building::house:
+				if(!player->decrease_balance(price_[(int) Price::house_stay]))
+					return false;
+				
+				owner_->increment_balance(price_[(int) Price::house_stay]);
+				break;
+			
+			case Building::hotel:
+				if(!player->decrease_balance(price_[(int) Price::hotel_stay]))
+					return false;
+					
+				owner_->increment_balance(price_[(int) Price::hotel_stay]);
+				break;
+		}
+		
+		return true;	
 	}
 	
 	//mancano i setter / getter ove necessari
