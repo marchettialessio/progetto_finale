@@ -54,7 +54,9 @@ namespace monopoly
 			Player& operator=(const Player& other) = delete;
 			
 			int get_balance() const { return balance_; }
-			
+
+			unsigned int get_current_position() const { return current_position_; }
+	
 			bool is_playing() { return balance_ >= 0; }
 			
 			void increment_balance(const int amount);
