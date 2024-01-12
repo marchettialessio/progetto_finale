@@ -54,23 +54,25 @@ namespace monopoly
 			Player& operator=(const Player& other) = delete;
 			
 			int get_balance() const { return balance_; }
-
-			unsigned int get_current_position() const { return current_position_; }
-	
+			
 			bool is_playing() { return balance_ >= 0; }
 			
 			void increment_balance(const int amount);
 			
 			bool decrease_balance(const int amount);
 			
-			bool play() {return true;} // = 0;
+			bool is_in_game_() {return in_game_;}
+
+			virtual void play(GameBoard current_gameboard) = 0;
 			
 			//bool start_increment() 
 			
-			private: 
+			protected: 
 				unsigned int current_position_;
+				unsigned int last_roll_;
 				std::string name_;
 				int balance_;
+				bool in_game_ = true;
 				
 				static constexpr int DEFAULT_BALANCE = 100;
 

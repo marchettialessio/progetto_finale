@@ -1,4 +1,5 @@
 #include "GameBoard.h"
+#include "Human.h"
 #include <iostream>
 
 using std::cout;
@@ -9,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	
 	Box* b = new AngularBox("Start", 500);
-	Player* tester = new Player("Tester", 100);
+	Player* tester = new Human("Tester", 100);
 	Box* b2 = new LateralBox("Lucca", LateralBox::Category::standard, tester);
 
 	if( dynamic_cast<LateralBox*>(b2) )

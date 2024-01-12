@@ -2,10 +2,11 @@
 #define MONOPOLY_BOT_H_
 
 #include <ostream>
+#include "Player.h"
 
 namespace monopoly   	
 {
-	class Bot
+	class Bot : public Player
 	{
 		public:
 		
@@ -48,6 +49,8 @@ namespace monopoly
 			* 	@param other an instance of Bot to assign.
 			*/
 			Bot& operator=(const Bot& other);
+			
+			void Play();
 			
 
 	};

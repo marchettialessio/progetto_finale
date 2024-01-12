@@ -116,6 +116,7 @@ namespace monopoly
 	};
 	
 	std::ostream& operator<<(std::ostream& out, const LateralBox& other); //redefinition
+	
 }
 
 #endif //MONOPOLY_LATERALBOX_H_

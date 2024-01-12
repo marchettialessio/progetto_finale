@@ -1,11 +1,17 @@
 #ifndef MONOPOLY_HUMAN_H_
 #define MONOPOLY_HUMAN_H_
 
-#include <ostream>
+#include <iostream>
+#include <cstdlib>
+#include "Player.h"
+#include "Dice.h"
+#include "Box.h"
+#include "GameBoard.h"
+
 
 namespace monopoly   	
 {
-	class Human
+	class Human : public Player
 	{
 		public:
 		
@@ -19,9 +25,10 @@ namespace monopoly
 			*	Class constructor.
 			*	Create an instance of Human.
 			* 
-			* 	@param ...
+			* 	@param name	the name of the Player
+			* 	@param balance 	the starting balance of the Player
 			*/
-			Human(/*param*/);
+			Human(const std::string& name, int balance);
 			
 			/**
 			*	Destructor.
@@ -49,7 +56,8 @@ namespace monopoly
 			*/
 			Human& operator=(const Human& other);
 			
-
+			void play(GameBoard current_gameboard);
+			
 	};
 	
 	std::ostream& operator<<(std::ostream& out, const Human& other); //redefinition
