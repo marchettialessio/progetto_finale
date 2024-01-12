@@ -71,7 +71,9 @@ namespace monopoly
 		GameBoard();
 		
 		player_ = players;
-		player_.resize(4);
+		
+		if(players.size() > GameBoard::NUM_PLAYER)
+			player_.resize(GameBoard::NUM_PLAYER);
 	}
 	
 	GameBoard::GameBoard(const GameBoard& other) {}
@@ -121,9 +123,74 @@ namespace monopoly
 		std::cout << std::endl;
 	}
 	
-	void GameBoard::show_players() const {}
+	void GameBoard::show_players() const 
+	{
 	
-	void GameBoard::show() const {}
+		std::vector<std::string*> out;
+		
+		for(int i=0; i < NUM_PLAYER; i++)
+		{
+			std::string* p = new std::string("Player #");
+			
+			*p += std::to_string(i+1) + ": ";
+			
+			out.push_back(p);
+		}
+
+		
+		for(int i=0; i < MAX_SIZE; i++)
+		{
+			if(dynamic_cast<LateralBox*>(gameboard_.at(i)))
+			{
+				for(int j=0; j < GameBoard::NUM_PLAYER; j++)
+				{
+					if(dynamic_cast<LateralBox*>(gameboard_.at(i))->is_box_owner(player_.at(j)))
+						*out.at(j) += std::to_string(i+1) + " "; 
+				}
+			}
+		
+		}
+		
+		for(int i=0; i < GameBoard::NUM_PLAYER; i++)
+		{
+			if(*out.at(i) == "Player #" + std::to_string(i+1) + ": ")
+				*out.at(i) += "no property";
+		}
+		
+		std::cout << "Players property: " << std::endl;
+		
+		for(int i=0; i < GameBoard::NUM_PLAYER; i++)
+		{
+			std::cout << *out.at(i) << std::endl;
+
+		}
+		
+	}
+	
+	void GameBoard::show() const 
+	{
+		std::cout << std::endl;
+	
+		this->show_gameboard();
+		
+		std::cout << std::endl;
+		
+		this->show_players();
+		
+		std::cout << std::endl;
+		
+		std::cout << "Players balance: " << std::endl;
+		
+		for(int i=0; i < GameBoard::NUM_PLAYER; i++)
+		{
+			if(player_.at(i) != nullptr)
+				std::cout << "Player #" << std::to_string(i+1) << ": " << player_.at(i)->get_balance() << std::endl;
+			else
+				std::cout << "Player #" << std::to_string(i+1) << ": " << "none" << std::endl;
+
+		}
+	
+	}
 	
 	bool GameBoard::is_angular_box(int position) const
 	{
