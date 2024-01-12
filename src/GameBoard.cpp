@@ -2,7 +2,7 @@
 
 namespace monopoly   	
 {
-	GameBoard::GameBoard() : GameBoard({nullptr, nullptr, nullptr, nullptr}) {}
+	GameBoard::GameBoard() : GameBoard({nullptr, nullptr, nullptr, nullptr}) {} //delegating constructor
 
 	GameBoard::GameBoard(std::vector<Player*> players) : player_{players}
 	{	
