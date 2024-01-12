@@ -2,14 +2,15 @@
 
 namespace monopoly   	
 {
-	GameBoard::GameBoard() : player_{nullptr, nullptr, nullptr, nullptr}
-	{
-	
-		gameboard_.resize(MAX_SIZE);
-		for(int i=0; i<MAX_SIZE; i++)
-		{
-				gameboard_.at(i) = new AngularBox("X",10);
-		}
+	GameBoard::GameBoard() : GameBoard({nullptr, nullptr, nullptr, nullptr}) {}
+
+	GameBoard::GameBoard(std::vector<Player*> players) : player_{players}
+	{	
+		if(players.size() > GameBoard::NUM_PLAYER)
+			player_.resize(GameBoard::NUM_PLAYER);
+			
+		gameboard_.resize(GameBoard::MAX_SIZE);
+			
 		//angular box insertion
 		for(int i=0; i<4; i++)
 		{
@@ -64,17 +65,6 @@ namespace monopoly
 			
 		}
 	}
-
-	GameBoard::GameBoard(std::vector<Player*> players)
-	{
-		
-		GameBoard();
-		
-		player_ = players;
-		
-		if(players.size() > GameBoard::NUM_PLAYER)
-			player_.resize(GameBoard::NUM_PLAYER);
-	}
 	
 	GameBoard::GameBoard(const GameBoard& other) {}
 	
@@ -83,13 +73,24 @@ namespace monopoly
 	GameBoard& GameBoard::operator=(const GameBoard& other) {}
 	
 	void GameBoard::show_gameboard() const 
-	{
-		/*for(int i=0; i < MAX_SIZE/4 + 1 ; i++)
+	{ 
+		std::vector<int> position;
+		
+		for(int i=0; i < NUM_PLAYER; i++)
+		{
+			position.push_back(player_.at(i)->get_current_position());
+		}
+	
+		std::cout << "  ";
+		
+		for(int i=0; i < MAX_SIZE/4 + 1 ; i++)
 		{				
-			std::cout << "  " << i+1 << "  ";
+			std::cout << " " << i+1 << "  ";
 		}
 		
-		std::cout << std::endl;*/
+		std::cout << std::endl;
+		
+		std::cout << MATRIX.at(0) << " ";
 		
 		for(int i=0; i < MAX_SIZE/4 + 1; i++)
 		{	
@@ -103,7 +104,7 @@ namespace monopoly
 			for(int j=0; j < MAX_SIZE/4 + 1; j++)
 			{
 				if(j==0)
-					std::cout << "|" << gameboard_[MAX_SIZE - i]->show_box() << "|";
+					std::cout << MATRIX.at(i % (MAX_SIZE/4)) << " |" << gameboard_[MAX_SIZE - i]->show_box() << "|";
 					
 				else if(j == MAX_SIZE/4)
 					std::cout << " |" << gameboard_[MAX_SIZE/4 + i]->show_box() << "|";
@@ -114,6 +115,8 @@ namespace monopoly
 			std::cout << std::endl;
 		}
 		
+		std::cout << MATRIX.at(7) << " ";
+				
 		for(int i = 3 * MAX_SIZE/4; i > 2 * MAX_SIZE/4 - 1; i--)
 		{
 			std::cout << "|" << gameboard_[i]->show_box() << "| " ;
@@ -145,7 +148,19 @@ namespace monopoly
 				for(int j=0; j < GameBoard::NUM_PLAYER; j++)
 				{
 					if(dynamic_cast<LateralBox*>(gameboard_.at(i))->is_box_owner(player_.at(j)))
-						*out.at(j) += std::to_string(i+1) + " "; 
+					{
+						if(i <= MAX_SIZE/4)
+							*out.at(j) += "A" + std::to_string(i+1) + " "; 
+							
+						else if(i <= MAX_SIZE/2)
+							*out.at(j) += MATRIX.at(i % (MAX_SIZE/4)) + std::to_string(8) + " "; 
+							
+						else if(i <= 3 * MAX_SIZE/4)
+							*out.at(j) += "H" + std::to_string(MAX_SIZE/4 - (i % (MAX_SIZE/4)) + 1) + " "; 
+							
+						else
+							*out.at(j) += MATRIX.at(MAX_SIZE/4 - (i % (MAX_SIZE/4))) + std::to_string(1) + " "; 
+					}
 				}
 			}
 		
