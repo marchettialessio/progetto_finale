@@ -127,6 +127,8 @@ namespace monopoly
 	
 	bool LateralBox::is_box_owner(const Player* player) const
 	{
+		if(owner_ == nullptr)
+			return false;
 		return owner_ == player;
 	}
 	
