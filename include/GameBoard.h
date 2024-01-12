@@ -77,6 +77,8 @@ namespace monopoly
 				static constexpr int ECONOMY = 8;
 				static constexpr int STANDARD = 10;
 				static constexpr int LUXURY = 6;
+				
+				const std::vector<char> MATRIX = {'A','B','C','D','E','F','G','H'};
 
 
 	};
