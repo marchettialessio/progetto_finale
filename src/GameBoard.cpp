@@ -13,7 +13,7 @@ namespace monopoly
 		//angular box insertion
 		for(int i=0; i<4; i++)
 		{
-			if(i == 7)
+			if(i == GameBoard::START)
 				gameboard_.at(0) = new AngularBox("P", 20);
 			else
 				gameboard_.at(MAX_SIZE/4 * i) = new AngularBox();
