@@ -68,6 +68,7 @@ namespace monopoly
 			
 			static constexpr int MAX_SIZE = 28; //must be divisible by 4
 			static constexpr int START = 0;
+			static constexpr int NUM_PLAYER = 4;
 			
 			private:
 				std::vector<Box*> gameboard_;
