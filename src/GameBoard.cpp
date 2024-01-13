@@ -74,52 +74,112 @@ namespace monopoly
 	
 	void GameBoard::show_gameboard() const 
 	{ 
-		std::vector<int> position;
+		std::vector<int> position;	//contains the position of the players
 		
 		for(int i=0; i < NUM_PLAYER; i++)
 		{
 			position.push_back(player_.at(i)->get_current_position());
 		}
 	
-		std::cout << "  ";
+		std::cout << " ";
 		
-		for(int i=0; i < MAX_SIZE/4 + 1 ; i++)
+		for(int i=0; i < MAX_SIZE/4 + 1 ; i++)	//column indicator printing (1 2 3 ... MAX_SIZE + 1)
 		{				
-			std::cout << " " << i+1 << "  ";
+			std::cout << "  " << i+1 << "  ";
 		}
 		
 		std::cout << std::endl;
 		
-		std::cout << MATRIX.at(0) << " ";
+		std::cout << MATRIX.at(0);	
 		
-		for(int i=0; i < MAX_SIZE/4 + 1; i++)
+		for(int i=0; i < MAX_SIZE/4 + 1; i++)	//first row printing (box from 1 to MAX_SIZE/4 +1 = *8* )
 		{	
-			std::cout << "|" << gameboard_[i]->show_box() << "| ";
+			std::string out = "";
+			
+			out.append("|").append(gameboard_[i]->show_box());
+			
+			for(int k=0; k < NUM_PLAYER; k++)	//players insertion
+			{
+				if(i == position.at(k))
+					out.append(std::to_string(k+1));
+			}
+			
+			out.append("|");
+			
+			if(out.length() == 3)	//formattazione
+				out.insert(0," ").insert(out.length()," ");
+			else if(out.length() == 4)
+				out.insert(0," ");
+			
+			std::cout << out;
 		}
 		
 		std::cout << std::endl;
 		
-		for(int i=1; i < MAX_SIZE/4; i++)
-		{
+		for(int i=1; i < MAX_SIZE/4; i++)	//middle row printing (box of first *1* and last *8* column )
+		{		
 			for(int j=0; j < MAX_SIZE/4 + 1; j++)
 			{
+				std::string out = "";
+				
 				if(j==0)
-					std::cout << MATRIX.at(i % (MAX_SIZE/4)) << " |" << gameboard_[MAX_SIZE - i]->show_box() << "|";
+				{
+					std::cout << MATRIX.at(i % (MAX_SIZE/4));
+					out.append("|").append(gameboard_[MAX_SIZE - i]->show_box());
+				}
 					
 				else if(j == MAX_SIZE/4)
-					std::cout << " |" << gameboard_[MAX_SIZE/4 + i]->show_box() << "|";
+					out.append("|").append(gameboard_[MAX_SIZE/4 + i]->show_box());
 					
 				else
-					std::cout << "    ";
+					out += "     ";
+					
+				for(int k=0; k < NUM_PLAYER; k++)	//players insertion
+				{
+					if(j == 0 && MAX_SIZE - i == position.at(k))
+						out.append(std::to_string(k+1));
+						
+					if(j == MAX_SIZE/4 && MAX_SIZE/4 + i == position.at(k))
+						out.append(std::to_string(k+1));
+				}
+				
+										
+				if(out != "     ")
+					out.append("|");
+					
+				if(out.length() == 3)	//formattazione
+					out.insert(0," ").insert(out.length()," ");
+				else if(out.length() == 4)
+					out.insert(0," ");
+					
+				std::cout << out;
 			}
+		
 			std::cout << std::endl;
 		}
 		
-		std::cout << MATRIX.at(7) << " ";
+		std::cout << MATRIX.at(7);
 				
-		for(int i = 3 * MAX_SIZE/4; i > 2 * MAX_SIZE/4 - 1; i--)
+		for(int i = 3 * MAX_SIZE/4; i > 2 * MAX_SIZE/4 - 1; i--)	//last row printing (box of row H)
 		{
-			std::cout << "|" << gameboard_[i]->show_box() << "| " ;
+			std::string out = "";
+			
+			out.append("|").append(gameboard_[i]->show_box());
+			
+			for(int k=0; k < NUM_PLAYER; k++)	//players insertion
+			{
+				if(i == position.at(k))
+					out.append(std::to_string(k+1));
+			}
+			
+			out.append("|");
+			
+			if(out.length() == 3)	//formattazione
+				out.insert(0," ").insert(out.length()," ");
+			else if(out.length() == 4)
+				out.insert(0," ");
+			
+			std::cout << out;
 		}
 		
 		
