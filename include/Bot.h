@@ -1,8 +1,12 @@
 #ifndef MONOPOLY_BOT_H_
 #define MONOPOLY_BOT_H_
 
-#include <ostream>
+#include <cstdlib>
 #include "Player.h"
+#include "Dice.h"
+#include "AngularBox.h"
+#include "LateralBox.h"
+
 
 namespace monopoly   	
 {
@@ -18,11 +22,12 @@ namespace monopoly
 			
 			/**
 			*	Class constructor.
-			*	Create an instance of Bot.
+			*	Create an instance of Human.
 			* 
-			* 	@param ...
+			* 	@param name	the name of the Player
+			* 	@param balance 	the starting balance of the Player
 			*/
-			Bot(/*param*/);
+			Bot(const std::string& name, int balance);
 			
 			/**
 			*	Destructor.
@@ -50,7 +55,17 @@ namespace monopoly
 			*/
 			Bot& operator=(const Bot& other);
 			
-			void Play();
+			void play(GameBoard& current_gameboard);
+
+		private:
+
+			/**
+			* 	returns a boolean based on the realization of an event, given a probability
+			* 
+			* 	@param probability_percent probability that the event will occur.
+			*	@return true if event occur
+			*/
+			bool random_probability(unsigned int probability_percent);
 			
 
 	};

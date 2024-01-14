@@ -1,13 +1,23 @@
-#include "Human.h"
+#include "Bot.h"
 #include "cstring"
 
 namespace monopoly
 {
-	Human::Human() : Player() {}
+	Bot::Bot() : Player() {}
 
-	Human::Human(const std::string &name, int balance) : Player(name, balance) {}
+	Bot::Bot(const std::string &name, int balance) : Player(name, balance) {}
 
-	void Human::play(GameBoard& current_gameboard)
+    bool Bot::random_probability(unsigned int probability_percent)
+    {
+        unsigned int generated_number = rand() % probability_percent;
+        if(generated_number < probability_percent)
+        {
+            return true;
+        }
+        return false;
+    }
+
+	void Bot::play(GameBoard& current_gameboard)
 	{
 
 		last_roll_ = Dice::Roll();
@@ -27,16 +37,8 @@ namespace monopoly
 
 		if (dynamic_cast<LateralBox *>(current_box)->is_for_sale())
 		{
-			char response;
 
-			do
-			{
-				std::cout << "Do you want to buy the property? (Y / N):";
-				std::cin >> response;
-				std::cout << std::endl;
-			} while (toupper(response) != 'Y' && toupper(response) != 'N');
-
-			if(response == 'Y')
+			if(random_probability(GameBoard::BOT_ACTION_PROBABILITY))
 			{
 				dynamic_cast<LateralBox *>(current_box)->sell(this);
 			}
@@ -55,16 +57,8 @@ namespace monopoly
 		if (dynamic_cast<LateralBox *>(current_box)->has_last_upgrade())
 		{
 			LateralBox::Building building = dynamic_cast<LateralBox *>(current_box)->get_building();
-			char response;
 
-			do
-			{
-				std::cout << "Do you want to upgrade your property? (Y / N):";
-				std::cin >> response;
-				std::cout << std::endl;
-			} while (toupper(response) != 'Y' && toupper(response) != 'N');
-
-			if(response == 'Y')
+			if(random_probability(GameBoard::BOT_ACTION_PROBABILITY))
 			{
 				if(dynamic_cast<LateralBox *>(current_box)->upgrade())
 				{

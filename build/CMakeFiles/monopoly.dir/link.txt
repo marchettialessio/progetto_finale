@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/monopoly.dir/src/main.cpp.o CMakeFiles/monopoly.dir/src/Player.cpp.o CMakeFiles/monopoly.dir/src/LateralBox.cpp.o CMakeFiles/monopoly.dir/src/AngularBox.cpp.o CMakeFiles/monopoly.dir/src/GameBoard.cpp.o CMakeFiles/monopoly.dir/src/Dice.cpp.o CMakeFiles/monopoly.dir/src/Human.cpp.o CMakeFiles/monopoly.dir/src/Bot.cpp.o  -o monopoly 

@@ -3,8 +3,8 @@
 
 #include <ostream>
 #include <vector>
-#include "Player.h"
 #include "Box.h"
+#include "Player.h"
 
 namespace monopoly   	
 {

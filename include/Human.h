@@ -3,11 +3,10 @@
 
 #include <iostream>
 #include <cstdlib>
-#include "Player.h"
-#include "Dice.h"
-#include "Box.h"
 #include "GameBoard.h"
-
+#include "Dice.h"
+#include "AngularBox.h"
+#include "LateralBox.h"
 
 namespace monopoly   	
 {
@@ -56,7 +55,7 @@ namespace monopoly
 			*/
 			Human& operator=(const Human& other);
 			
-			void play(GameBoard current_gameboard);
+			void play(GameBoard& current_gameboard);
 			
 	};
 	

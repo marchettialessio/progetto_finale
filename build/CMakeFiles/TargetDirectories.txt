@@ -1,0 +1,3 @@
+/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/rebuild_cache.dir
+/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/edit_cache.dir
+/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir

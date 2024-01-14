@@ -51,7 +51,7 @@ namespace monopoly
 			*/
 			Dice() = delete;
 			
-			static unsigned int Roll () {}; //gestire la generazione dei 2 dadi
+			static unsigned int Roll (); //gestire la generazione dei 2 dadi
 			
 
 	};

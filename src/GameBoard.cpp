@@ -276,6 +276,11 @@ namespace monopoly
 	{
 		return gameboard_.at(position); //if position is out_of_range throw out_of_range_exception
 	}
+
+	Player* GameBoard::get_player(int position)
+	{
+		return player_.at(position); //if position is out_of_range throw out_of_range_exception
+	}
 	
 	std::ostream& operator<<(std::ostream& out, const GameBoard& other)
 	{

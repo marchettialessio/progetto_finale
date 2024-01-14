@@ -3,12 +3,15 @@
 
 #include <ostream>
 #include <string>
+#include "GameBoard.h"
 
 namespace monopoly   	
 {
 	class Player
 	{
 		public:
+
+			static constexpr int DEFAULT_BALANCE = 100;
 		
 			/**
 			*	Default constructor.
@@ -63,10 +66,10 @@ namespace monopoly
 			
 			bool is_in_game_() {return in_game_;}
 
-			virtual void play(GameBoard current_gameboard) = 0;
-			
-			//bool start_increment() 
-			
+			int get_current_position() {return current_position_;}
+
+			virtual void play(GameBoard& current_gameboard) = 0;
+						
 			protected: 
 				unsigned int current_position_;
 				unsigned int last_roll_;
@@ -74,7 +77,7 @@ namespace monopoly
 				int balance_;
 				bool in_game_ = true;
 				
-				static constexpr int DEFAULT_BALANCE = 100;
+				
 
 	};
 	

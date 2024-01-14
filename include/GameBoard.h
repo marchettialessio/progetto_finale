@@ -7,6 +7,8 @@
 #include <ctime>
 #include <ios>
 #include <iomanip>
+#include "Player.h"
+#include "Box.h"
 #include "AngularBox.h"
 #include "LateralBox.h"
 
@@ -65,10 +67,13 @@ namespace monopoly
 			bool is_angular_box(int position) const;
 			
 			Box* get_box(int position);
+
+			Player* get_player(int position);
 			
 			static constexpr int MAX_SIZE = 28; //must be divisible by 4
 			static constexpr int START = 0;
 			static constexpr int NUM_PLAYER = 4;
+			static constexpr int BOT_ACTION_PROBABILITY = 25;
 			
 			private:
 				std::vector<Box*> gameboard_;
