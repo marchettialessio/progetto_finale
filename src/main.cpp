@@ -23,9 +23,5 @@ int main(int argc, char *argv[])
 		usleep(180000);
 	}
 	
-	
-	
-	test.show();
-	
 	return 0;
 }
