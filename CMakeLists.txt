@@ -18,6 +18,7 @@ set(SOURCE_FILES
 	src/Dice.cpp
 	src/Human.cpp
 	src/Bot.cpp
+	src/Log.cpp
 )
 
 
