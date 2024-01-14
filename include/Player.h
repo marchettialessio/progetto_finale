@@ -3,7 +3,6 @@
 
 #include <ostream>
 #include <string>
-#include "GameBoard.h"
 
 namespace monopoly   	
 {
@@ -58,6 +57,8 @@ namespace monopoly
 			
 			int get_balance() const { return balance_; }
 			
+			int get_last_roll() const { return last_roll_; }
+			
 			bool is_playing() { return balance_ >= 0; }
 			
 			void increment_balance(const int amount);
@@ -67,8 +68,16 @@ namespace monopoly
 			bool is_in_game_() {return in_game_;}
 
 			int get_current_position() {return current_position_;}
+			
+			void set_in_game(bool b) {in_game_ = b;}
 
-			virtual void play(GameBoard& current_gameboard) = 0;
+			void set_current_position(unsigned int pos) {current_position_= pos;}
+			
+			void set_last_roll(unsigned int roll) { last_roll_ = roll; }
+			
+			void set_balance(int balance){ balance_= balance; }
+
+			//virtual void play(Dice& current_gameboard) = 0;
 						
 			protected: 
 				unsigned int current_position_;
@@ -85,3 +94,4 @@ namespace monopoly
 }
 
 #endif //MONOPOLY_PLAYER_H_
+
