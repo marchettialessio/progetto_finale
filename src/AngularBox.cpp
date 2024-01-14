@@ -15,11 +15,31 @@ namespace monopoly
 		}
 	}
 
-	AngularBox::AngularBox(const AngularBox& other){}
+	AngularBox::AngularBox(const AngularBox& other)
+	{
+		AngularBox(other.get_name(), other.start_bonus_);
+	}
 
-	AngularBox::AngularBox(AngularBox&& other){}
+	//move constructor: set previous object to undefine state
+	//previous objet after move not usable	
+	AngularBox::AngularBox(AngularBox&& other)
+	{
+		AngularBox(other.get_name(), other.start_bonus_);
+		
+		other.set_name("");		
+		other.start_bonus_ = 0;
+		other.is_start_ = false;
+	}
 
-	AngularBox& AngularBox::operator=(const AngularBox& other){}
+	AngularBox& AngularBox::operator=(const AngularBox& other)
+	{
+		this->set_name(other.get_name());
+	
+		start_bonus_ = other.start_bonus_;
+		is_start_ = other.is_start_;
+		
+		return *this;
+	}
 	
 	std::string AngularBox::show_box() const
 	{
@@ -27,6 +47,5 @@ namespace monopoly
 	}
 			
 	
-	std::ostream& operator<<(std::ostream& out, const AngularBox& other) { return out << other.show_box(); } //redefinition
+	std::ostream& operator<<(std::ostream& out, const AngularBox& other) { return out << "LateralBox: " << other.show_box(); } 
 }
-

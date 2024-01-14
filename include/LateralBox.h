@@ -3,6 +3,8 @@
 
 #include <ostream>
 #include <vector>
+
+#include "Player.h"
 #include "Box.h"
 #include "Player.h"
 
@@ -50,7 +52,7 @@ namespace monopoly
 			/**
 			*	Destructor.
 			*/
-			~LateralBox() override { delete owner_; }
+			~LateralBox() override { delete owner_ ; }
 			
 			/**
 		 	*	Copy constructor.
@@ -116,7 +118,6 @@ namespace monopoly
 	};
 	
 	std::ostream& operator<<(std::ostream& out, const LateralBox& other); //redefinition
-	
 }
 
 #endif //MONOPOLY_LATERALBOX_H_

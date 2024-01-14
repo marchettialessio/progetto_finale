@@ -5,10 +5,8 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include <ios>
-#include <iomanip>
-#include "Player.h"
-#include "Box.h"
+#include <memory>
+
 #include "AngularBox.h"
 #include "LateralBox.h"
 
@@ -35,14 +33,14 @@ namespace monopoly
 			/**
 			*	Destructor.
 			*/
-			~GameBoard() = default;
+			~GameBoard() = default; //pointer to players deleted by box destructor
 			
 			/**
-		 	*	Copy constructor.
+		 	*	Copy constructor not allowed.
 		 	* 
 		 	*	@param other an instance of GameBoard to copy.
 			*/
-			GameBoard(const GameBoard& other);
+			GameBoard(const GameBoard& other) = delete;
 			
 			/**
 		 	*	Move constructor.
@@ -52,11 +50,11 @@ namespace monopoly
 			GameBoard(GameBoard&& other);
 			
 			/**
-			* 	Assignment operator.
+			* 	Assignment operator not allowed.
 			* 
 			* 	@param other an instance of GameBoard to assign.
 			*/
-			GameBoard& operator=(const GameBoard& other);
+			GameBoard& operator=(const GameBoard& other) = delete;
 			
 			void show_gameboard() const;
 			
@@ -76,7 +74,11 @@ namespace monopoly
 			static constexpr int BOT_ACTION_PROBABILITY = 25;
 			
 			private:
-				std::vector<Box*> gameboard_;
+			
+				//unique_ptr to avoid dangling pointer when vector is destroyed
+				//shared_ptr permit copy despite a loss of performance
+				
+				std::vector<std::unique_ptr<Box>> gameboard_;
 				std::vector<Player*> player_;
 				
 				static constexpr int ECONOMY = 8;
