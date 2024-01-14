@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/monopoly.dir/src/GameBoard.cpp.o"
   "CMakeFiles/monopoly.dir/src/Human.cpp.o"
   "CMakeFiles/monopoly.dir/src/LateralBox.cpp.o"
+  "CMakeFiles/monopoly.dir/src/Log.cpp.o"
   "CMakeFiles/monopoly.dir/src/Player.cpp.o"
   "CMakeFiles/monopoly.dir/src/main.cpp.o"
   "monopoly"

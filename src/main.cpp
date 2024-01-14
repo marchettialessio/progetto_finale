@@ -28,13 +28,13 @@ void play_bot(GameBoard& current_gameboard, Player* player)
 {
 	player->set_last_roll(Roll());
 	
-	if (player->get_current_position() + player->get_last_roll() < GameBoard::MAX_SIZE)
+	if (player->get_current_position() + player->get_last_roll() >= GameBoard::MAX_SIZE)
 	{
 		Box *start_box = current_gameboard.get_box(GameBoard::START);
 		player->set_balance( player->get_balance() + dynamic_cast<AngularBox *>(start_box)->start_bonus());
 	}
 
-	player->set_current_position(player->get_current_position() + player->get_last_roll() % GameBoard::MAX_SIZE);
+	player->set_current_position((player->get_current_position() + player->get_last_roll()) % GameBoard::MAX_SIZE);
 
 	Box *current_box = current_gameboard.get_box(player->get_current_position());
 
@@ -62,7 +62,8 @@ void play_bot(GameBoard& current_gameboard, Player* player)
 		return;
 	}
 
-	if (dynamic_cast<LateralBox *>(current_box)->has_last_upgrade())
+
+	if (!dynamic_cast<LateralBox *>(current_box)->has_last_upgrade())
 	{
 		LateralBox::Building building = dynamic_cast<LateralBox *>(current_box)->get_building();
 
@@ -81,13 +82,13 @@ void play_human(GameBoard& current_gameboard, Player* player)
 {
 		player->set_last_roll(Roll());
 		
-		if (player->get_current_position() + player->get_last_roll() < GameBoard::MAX_SIZE)
+		if (player->get_current_position() + player->get_last_roll() >= GameBoard::MAX_SIZE)
 		{
 			Box *start_box = current_gameboard.get_box(GameBoard::START);
 			player->set_balance( player->get_balance() + dynamic_cast<AngularBox *>(start_box)->start_bonus());
 		}
 		
-		player->set_current_position(player->get_current_position() + player->get_last_roll() % GameBoard::MAX_SIZE);
+		player->set_current_position((player->get_current_position() + player->get_last_roll()) % GameBoard::MAX_SIZE);
 
 		Box *current_box = current_gameboard.get_box(player->get_current_position());
 
@@ -179,7 +180,7 @@ int main(int argc, char *argv[])
 	{
 		for(int j=0; j<4; j++)
 		{
-			play_bot(test, player.at(i));
+			play_bot(test, player.at(j));
 		}
 		
 		std::system("clear");

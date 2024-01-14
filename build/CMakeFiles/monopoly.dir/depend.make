@@ -5,13 +5,6 @@ CMakeFiles/monopoly.dir/src/AngularBox.cpp.o: ../include/AngularBox.h
 CMakeFiles/monopoly.dir/src/AngularBox.cpp.o: ../include/Box.h
 CMakeFiles/monopoly.dir/src/AngularBox.cpp.o: ../src/AngularBox.cpp
 
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/AngularBox.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/Bot.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/Box.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/Dice.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/GameBoard.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/LateralBox.h
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../src/Bot.cpp
 
 CMakeFiles/monopoly.dir/src/Dice.cpp.o: ../include/Dice.h
@@ -24,35 +17,24 @@ CMakeFiles/monopoly.dir/src/GameBoard.cpp.o: ../include/LateralBox.h
 CMakeFiles/monopoly.dir/src/GameBoard.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/GameBoard.cpp.o: ../src/GameBoard.cpp
 
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/AngularBox.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/Box.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/Dice.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/GameBoard.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/Human.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/LateralBox.h
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/Human.cpp.o: ../src/Human.cpp
 
-CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../include/AngularBox.h
 CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../include/Box.h
-CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../include/GameBoard.h
 CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../include/LateralBox.h
 CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: ../src/LateralBox.cpp
 
-CMakeFiles/monopoly.dir/src/Player.cpp.o: ../include/AngularBox.h
-CMakeFiles/monopoly.dir/src/Player.cpp.o: ../include/Box.h
-CMakeFiles/monopoly.dir/src/Player.cpp.o: ../include/GameBoard.h
-CMakeFiles/monopoly.dir/src/Player.cpp.o: ../include/LateralBox.h
+CMakeFiles/monopoly.dir/src/Log.cpp.o: ../include/Log.h
+CMakeFiles/monopoly.dir/src/Log.cpp.o: ../include/Player.h
+CMakeFiles/monopoly.dir/src/Log.cpp.o: ../src/Log.cpp
+
 CMakeFiles/monopoly.dir/src/Player.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/Player.cpp.o: ../src/Player.cpp
 
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/AngularBox.h
-CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/Bot.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/Box.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/Dice.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/GameBoard.h
-CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/Human.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/LateralBox.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../include/Player.h
 CMakeFiles/monopoly.dir/src/main.cpp.o: ../src/main.cpp

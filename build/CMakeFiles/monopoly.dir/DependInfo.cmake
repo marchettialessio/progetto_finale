@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alessio/Desktop/uni/git/progetto_finale/src/GameBoard.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/GameBoard.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Human.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/LateralBox.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/LateralBox.cpp.o"
+  "/home/alessio/Desktop/uni/git/progetto_finale/src/Log.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Log.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/Player.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Player.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/main.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/main.cpp.o"
   )

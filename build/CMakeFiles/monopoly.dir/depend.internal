@@ -6,13 +6,6 @@ CMakeFiles/monopoly.dir/src/AngularBox.cpp.o
  ../include/Box.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/AngularBox.cpp
 CMakeFiles/monopoly.dir/src/Bot.cpp.o
- ../include/AngularBox.h
- ../include/Bot.h
- ../include/Box.h
- ../include/Dice.h
- ../include/GameBoard.h
- ../include/LateralBox.h
- ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/Bot.cpp
 CMakeFiles/monopoly.dir/src/Dice.cpp.o
  ../include/Dice.h
@@ -25,35 +18,24 @@ CMakeFiles/monopoly.dir/src/GameBoard.cpp.o
  ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/GameBoard.cpp
 CMakeFiles/monopoly.dir/src/Human.cpp.o
- ../include/AngularBox.h
- ../include/Box.h
- ../include/Dice.h
- ../include/GameBoard.h
- ../include/Human.h
- ../include/LateralBox.h
- ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp
 CMakeFiles/monopoly.dir/src/LateralBox.cpp.o
- ../include/AngularBox.h
  ../include/Box.h
- ../include/GameBoard.h
  ../include/LateralBox.h
  ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/LateralBox.cpp
+CMakeFiles/monopoly.dir/src/Log.cpp.o
+ ../include/Log.h
+ ../include/Player.h
+ /home/alessio/Desktop/uni/git/progetto_finale/src/Log.cpp
 CMakeFiles/monopoly.dir/src/Player.cpp.o
- ../include/AngularBox.h
- ../include/Box.h
- ../include/GameBoard.h
- ../include/LateralBox.h
  ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/Player.cpp
 CMakeFiles/monopoly.dir/src/main.cpp.o
  ../include/AngularBox.h
- ../include/Bot.h
  ../include/Box.h
  ../include/Dice.h
  ../include/GameBoard.h
- ../include/Human.h
  ../include/LateralBox.h
  ../include/Player.h
  /home/alessio/Desktop/uni/git/progetto_finale/src/main.cpp
