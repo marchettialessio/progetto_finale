@@ -38,7 +38,7 @@ namespace monopoly
 		 	*	@param other an instance of Player to copy.
 		 	*	=delete against slicing
 			*/
-			Player(const Player& other) = delete;
+			Player(const Player& other) = default;
 			
 			/**
 		 	*	Move constructor.
@@ -46,14 +46,14 @@ namespace monopoly
 		 	*	@param other an instance of Player to move.
 		 	*	=delete against slicing
 			*/
-			Player(Player&& other) = delete;
+			Player(Player&& other) = default;
 			
 			/**
 			* 	Assignment operator.
 			* 
 			* 	@param other an instance of Player to assign.
 			*/
-			Player& operator=(const Player& other) = delete;
+			Player& operator=(const Player& other) = default;
 			
 			int get_balance() const { return balance_; }
 			
@@ -65,9 +65,9 @@ namespace monopoly
 			
 			bool decrease_balance(const int amount);
 			
-			bool is_in_game_() {return in_game_;}
+			bool is_in_game_() const {return in_game_;}
 
-			int get_current_position() {return current_position_;}
+			int get_current_position() const {return current_position_;}
 			
 			void set_in_game(bool b) {in_game_ = b;}
 
