@@ -15,9 +15,9 @@ namespace monopoly
 		for(int i=0; i<4; i++)
 		{
 			if(i == GameBoard::START)
-				gameboard_.at(0) = new AngularBox("P", 20);
+				gameboard_.at(0) = std::unique_ptr<Box>(new AngularBox("P", 20));
 			else
-				gameboard_.at(MAX_SIZE/4 * i) = new AngularBox();
+				gameboard_.at(MAX_SIZE/4 * i) = std::unique_ptr<Box>(new AngularBox());
 		}
 		
 		//lateral box insertion
@@ -38,27 +38,27 @@ namespace monopoly
 				
 				if(rand == 0 && economy_count < ECONOMY)
 				{
-					gameboard_.at(i) = new LateralBox("E", LateralBox::Category::economy);
+					gameboard_.at(i) = std::unique_ptr<Box>(new LateralBox("E", LateralBox::Category::economy));
 					economy_count++;
 				}
 				else if(rand == 2 && luxury_count < LUXURY)
 				{
-					gameboard_.at(i) = new LateralBox("L", LateralBox::Category::luxury);
+					gameboard_.at(i) = std::unique_ptr<Box>(new LateralBox("L", LateralBox::Category::luxury));
 					luxury_count++;	
 				}
 				else if(standard_count < STANDARD)
 				{
-					gameboard_.at(i) = new LateralBox("S", LateralBox::Category::standard);
+					gameboard_.at(i) = std::unique_ptr<Box>(new LateralBox("S", LateralBox::Category::standard));
 					standard_count++;	
 				}
 				else if(economy_count < ECONOMY)
 				{
-					gameboard_.at(i) = new LateralBox("E", LateralBox::Category::economy);
+					gameboard_.at(i) = std::unique_ptr<Box>(new LateralBox("E", LateralBox::Category::economy));
 					economy_count++;
 				}
 				else
 				{
-					gameboard_.at(i) = new LateralBox("L", LateralBox::Category::luxury);
+					gameboard_.at(i) = std::unique_ptr<Box>(new LateralBox("L", LateralBox::Category::luxury));
 					luxury_count++;	
 				}
 			}
@@ -66,11 +66,11 @@ namespace monopoly
 		}
 	}
 	
-	GameBoard::GameBoard(const GameBoard& other) {}
-	
-	GameBoard::GameBoard(GameBoard&& other) {}
-
-	GameBoard& GameBoard::operator=(const GameBoard& other) {}
+	GameBoard::GameBoard(GameBoard&& other) 
+	{
+		player_ = std::move(other.player_);
+		gameboard_ = std::move(other.gameboard_);
+	}
 	
 	void GameBoard::show_gameboard() const 
 	{ 
@@ -106,7 +106,7 @@ namespace monopoly
 			
 			out.append("|");
 			
-			if(out.length() == 3)	//formattazione
+			if(out.length() == 3)	//formatting
 				out.insert(0," ").insert(out.length()," ");
 			else if(out.length() == 4)
 				out.insert(0," ");
@@ -147,7 +147,7 @@ namespace monopoly
 				if(out != "     ")
 					out.append("|");
 					
-				if(out.length() == 3)	//formattazione
+				if(out.length() == 3)	//formatting
 					out.insert(0," ").insert(out.length()," ");
 				else if(out.length() == 4)
 					out.insert(0," ");
@@ -174,7 +174,7 @@ namespace monopoly
 			
 			out.append("|");
 			
-			if(out.length() == 3)	//formattazione
+			if(out.length() == 3)	//formatting
 				out.insert(0," ").insert(out.length()," ");
 			else if(out.length() == 4)
 				out.insert(0," ");
@@ -189,13 +189,13 @@ namespace monopoly
 	void GameBoard::show_players() const 
 	{
 	
-		std::vector<std::string*> out;
+		std::vector<std::string> out;
 		
 		for(int i=0; i < NUM_PLAYER; i++)
 		{
-			std::string* p = new std::string("Player #");
+			std::string p = "Player #";
 			
-			*p += std::to_string(i+1) + ": ";
+			p += std::to_string(i+1) + ": ";
 			
 			out.push_back(p);
 		}
@@ -203,23 +203,23 @@ namespace monopoly
 		
 		for(int i=0; i < MAX_SIZE; i++)
 		{
-			if(dynamic_cast<LateralBox*>(gameboard_.at(i)))
+			if(dynamic_cast<LateralBox*>(gameboard_.at(i).get()))
 			{
 				for(int j=0; j < GameBoard::NUM_PLAYER; j++)
 				{
-					if(dynamic_cast<LateralBox*>(gameboard_.at(i))->is_box_owner(player_.at(j)))
+					if(dynamic_cast<LateralBox*>(gameboard_.at(i).get())->is_box_owner(player_.at(j)))
 					{
 						if(i <= MAX_SIZE/4)
-							*out.at(j) += "A" + std::to_string(i+1) + " "; 
+							out.at(j) += "A" + std::to_string(i+1) + " "; 
 							
 						else if(i <= MAX_SIZE/2)
-							*out.at(j) += MATRIX.at(i % (MAX_SIZE/4)) + std::to_string(8) + " "; 
+							out.at(j) += MATRIX.at(i % (MAX_SIZE/4)) + std::to_string(8) + " "; 
 							
 						else if(i <= 3 * MAX_SIZE/4)
-							*out.at(j) += "H" + std::to_string(MAX_SIZE/4 - (i % (MAX_SIZE/4)) + 1) + " "; 
+							out.at(j) += "H" + std::to_string(MAX_SIZE/4 - (i % (MAX_SIZE/4)) + 1) + " "; 
 							
 						else
-							*out.at(j) += MATRIX.at(MAX_SIZE/4 - (i % (MAX_SIZE/4))) + std::to_string(1) + " "; 
+							out.at(j) += MATRIX.at(MAX_SIZE/4 - (i % (MAX_SIZE/4))) + std::to_string(1) + " "; 
 					}
 				}
 			}
@@ -228,15 +228,15 @@ namespace monopoly
 		
 		for(int i=0; i < GameBoard::NUM_PLAYER; i++)
 		{
-			if(*out.at(i) == "Player #" + std::to_string(i+1) + ": ")
-				*out.at(i) += "no property";
+			if(out.at(i) == "Player #" + std::to_string(i+1) + ": ")
+				out.at(i) += "no property";
 		}
 		
 		std::cout << "Players property: " << std::endl;
 		
 		for(int i=0; i < GameBoard::NUM_PLAYER; i++)
 		{
-			std::cout << *out.at(i) << std::endl;
+			std::cout << out.at(i) << std::endl;
 
 		}
 		
@@ -274,11 +274,11 @@ namespace monopoly
 	
 	Box* GameBoard::get_box(int position)
 	{
-		return gameboard_.at(position); //if position is out_of_range throw out_of_range_exception
+		return gameboard_.at(position).get(); //if position is out_of_range throw out_of_range_exception
 	}
 	
 	std::ostream& operator<<(std::ostream& out, const GameBoard& other)
 	{
-		return out << "";
+		return out << "GameBoard: >size " << GameBoard::MAX_SIZE << ">player in game " << GameBoard::NUM_PLAYER << std::endl;
 	} 
 }
