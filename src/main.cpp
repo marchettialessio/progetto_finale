@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		}
 		
 		std::system("clear");
-		test.show();
+		gameboard.show();
 		usleep(180000);
 	}
 	
