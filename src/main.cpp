@@ -124,7 +124,7 @@ void play_human(GameBoard& current_gameboard, Player* player)
 			return;
 		}
 
-		if (dynamic_cast<LateralBox *>(current_box)->has_last_upgrade())
+		if (!dynamic_cast<LateralBox *>(current_box)->has_last_upgrade())
 		{
 			LateralBox::Building building = dynamic_cast<LateralBox *>(current_box)->get_building();
 			char response;
