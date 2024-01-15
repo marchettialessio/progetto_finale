@@ -80,8 +80,8 @@ namespace monopoly
 			private:
 			
 				//unique_ptr to avoid dangling pointer when vector is destroyed
-				//shared_ptr permit copy despite a loss of performance
-				
+				//shared_ptr permit copy despite a loss of performance		
+				//we use a vector instead of a matrix to save empty spaces in the center of the board
 				std::vector<std::unique_ptr<Box>> gameboard_;
 				std::vector<Player*> player_;
 				
