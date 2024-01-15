@@ -78,7 +78,9 @@ namespace monopoly
 			Category get_category() const { return category_; }
 			
 			Building get_building() const { return building_; }
-			
+
+			Player* get_owner() const {return owner_;};
+	
 			int get_price(const int type) const;
 			
 			bool sell(Player* owner); //sell the box

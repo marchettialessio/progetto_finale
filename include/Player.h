@@ -58,6 +58,8 @@ namespace monopoly
 			int get_balance() const { return balance_; }
 			
 			int get_last_roll() const { return last_roll_; }
+
+			std::string get_name() const { return name_; }
 			
 			bool is_playing() { return balance_ >= 0; }
 			

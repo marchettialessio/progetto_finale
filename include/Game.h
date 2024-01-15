@@ -3,6 +3,7 @@
 
 #include "GameBoard.h"
 #include "Player.h"
+#include "Log.h"
 
 #include <unistd.h>
 #include <iostream>

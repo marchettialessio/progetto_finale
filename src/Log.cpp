@@ -44,13 +44,13 @@ namespace monopoly
         write_on_file(string);
     }
 
-    void Log::log_winner(std::string player_name)
+    void Log::log_loser(std::string player_name)
     {
         std::string string = "Player " + player_name + " was eliminated";
         write_on_file(string);
     }
 
-    void Log::log_loser(std::string player_name)
+    void Log::log_winner(std::string player_name)
     {
         std::string string = "Player " + player_name + " won the match";
         write_on_file(string);
