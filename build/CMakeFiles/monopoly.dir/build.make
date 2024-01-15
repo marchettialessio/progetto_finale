@@ -122,48 +122,9 @@ CMakeFiles/monopoly.dir/src/GameBoard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monopoly.dir/src/GameBoard.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alessio/Desktop/uni/git/progetto_finale/src/GameBoard.cpp -o CMakeFiles/monopoly.dir/src/GameBoard.cpp.s
 
-CMakeFiles/monopoly.dir/src/Dice.cpp.o: CMakeFiles/monopoly.dir/flags.make
-CMakeFiles/monopoly.dir/src/Dice.cpp.o: ../src/Dice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monopoly.dir/src/Dice.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monopoly.dir/src/Dice.cpp.o -c /home/alessio/Desktop/uni/git/progetto_finale/src/Dice.cpp
-
-CMakeFiles/monopoly.dir/src/Dice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monopoly.dir/src/Dice.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alessio/Desktop/uni/git/progetto_finale/src/Dice.cpp > CMakeFiles/monopoly.dir/src/Dice.cpp.i
-
-CMakeFiles/monopoly.dir/src/Dice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monopoly.dir/src/Dice.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alessio/Desktop/uni/git/progetto_finale/src/Dice.cpp -o CMakeFiles/monopoly.dir/src/Dice.cpp.s
-
-CMakeFiles/monopoly.dir/src/Human.cpp.o: CMakeFiles/monopoly.dir/flags.make
-CMakeFiles/monopoly.dir/src/Human.cpp.o: ../src/Human.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monopoly.dir/src/Human.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monopoly.dir/src/Human.cpp.o -c /home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp
-
-CMakeFiles/monopoly.dir/src/Human.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monopoly.dir/src/Human.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp > CMakeFiles/monopoly.dir/src/Human.cpp.i
-
-CMakeFiles/monopoly.dir/src/Human.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monopoly.dir/src/Human.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp -o CMakeFiles/monopoly.dir/src/Human.cpp.s
-
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: CMakeFiles/monopoly.dir/flags.make
-CMakeFiles/monopoly.dir/src/Bot.cpp.o: ../src/Bot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/monopoly.dir/src/Bot.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monopoly.dir/src/Bot.cpp.o -c /home/alessio/Desktop/uni/git/progetto_finale/src/Bot.cpp
-
-CMakeFiles/monopoly.dir/src/Bot.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monopoly.dir/src/Bot.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alessio/Desktop/uni/git/progetto_finale/src/Bot.cpp > CMakeFiles/monopoly.dir/src/Bot.cpp.i
-
-CMakeFiles/monopoly.dir/src/Bot.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monopoly.dir/src/Bot.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alessio/Desktop/uni/git/progetto_finale/src/Bot.cpp -o CMakeFiles/monopoly.dir/src/Bot.cpp.s
-
 CMakeFiles/monopoly.dir/src/Log.cpp.o: CMakeFiles/monopoly.dir/flags.make
 CMakeFiles/monopoly.dir/src/Log.cpp.o: ../src/Log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/monopoly.dir/src/Log.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monopoly.dir/src/Log.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monopoly.dir/src/Log.cpp.o -c /home/alessio/Desktop/uni/git/progetto_finale/src/Log.cpp
 
 CMakeFiles/monopoly.dir/src/Log.cpp.i: cmake_force
@@ -176,7 +137,7 @@ CMakeFiles/monopoly.dir/src/Log.cpp.s: cmake_force
 
 CMakeFiles/monopoly.dir/src/Game.cpp.o: CMakeFiles/monopoly.dir/flags.make
 CMakeFiles/monopoly.dir/src/Game.cpp.o: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/monopoly.dir/src/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monopoly.dir/src/Game.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/monopoly.dir/src/Game.cpp.o -c /home/alessio/Desktop/uni/git/progetto_finale/src/Game.cpp
 
 CMakeFiles/monopoly.dir/src/Game.cpp.i: cmake_force
@@ -194,9 +155,6 @@ monopoly_OBJECTS = \
 "CMakeFiles/monopoly.dir/src/LateralBox.cpp.o" \
 "CMakeFiles/monopoly.dir/src/AngularBox.cpp.o" \
 "CMakeFiles/monopoly.dir/src/GameBoard.cpp.o" \
-"CMakeFiles/monopoly.dir/src/Dice.cpp.o" \
-"CMakeFiles/monopoly.dir/src/Human.cpp.o" \
-"CMakeFiles/monopoly.dir/src/Bot.cpp.o" \
 "CMakeFiles/monopoly.dir/src/Log.cpp.o" \
 "CMakeFiles/monopoly.dir/src/Game.cpp.o"
 
@@ -208,14 +166,11 @@ monopoly: CMakeFiles/monopoly.dir/src/Player.cpp.o
 monopoly: CMakeFiles/monopoly.dir/src/LateralBox.cpp.o
 monopoly: CMakeFiles/monopoly.dir/src/AngularBox.cpp.o
 monopoly: CMakeFiles/monopoly.dir/src/GameBoard.cpp.o
-monopoly: CMakeFiles/monopoly.dir/src/Dice.cpp.o
-monopoly: CMakeFiles/monopoly.dir/src/Human.cpp.o
-monopoly: CMakeFiles/monopoly.dir/src/Bot.cpp.o
 monopoly: CMakeFiles/monopoly.dir/src/Log.cpp.o
 monopoly: CMakeFiles/monopoly.dir/src/Game.cpp.o
 monopoly: CMakeFiles/monopoly.dir/build.make
 monopoly: CMakeFiles/monopoly.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable monopoly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable monopoly"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/monopoly.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

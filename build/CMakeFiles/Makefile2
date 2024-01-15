@@ -74,12 +74,12 @@ clean: CMakeFiles/monopoly.dir/clean
 CMakeFiles/monopoly.dir/all:
 	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/depend
 	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target monopoly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target monopoly"
 .PHONY : CMakeFiles/monopoly.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/monopoly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/monopoly.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles 0
 .PHONY : CMakeFiles/monopoly.dir/rule

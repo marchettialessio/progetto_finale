@@ -150,60 +150,6 @@ src/AngularBox.cpp.s:
 	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/AngularBox.cpp.s
 .PHONY : src/AngularBox.cpp.s
 
-src/Bot.o: src/Bot.cpp.o
-
-.PHONY : src/Bot.o
-
-# target to build an object file
-src/Bot.cpp.o:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Bot.cpp.o
-.PHONY : src/Bot.cpp.o
-
-src/Bot.i: src/Bot.cpp.i
-
-.PHONY : src/Bot.i
-
-# target to preprocess a source file
-src/Bot.cpp.i:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Bot.cpp.i
-.PHONY : src/Bot.cpp.i
-
-src/Bot.s: src/Bot.cpp.s
-
-.PHONY : src/Bot.s
-
-# target to generate assembly for a file
-src/Bot.cpp.s:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Bot.cpp.s
-.PHONY : src/Bot.cpp.s
-
-src/Dice.o: src/Dice.cpp.o
-
-.PHONY : src/Dice.o
-
-# target to build an object file
-src/Dice.cpp.o:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Dice.cpp.o
-.PHONY : src/Dice.cpp.o
-
-src/Dice.i: src/Dice.cpp.i
-
-.PHONY : src/Dice.i
-
-# target to preprocess a source file
-src/Dice.cpp.i:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Dice.cpp.i
-.PHONY : src/Dice.cpp.i
-
-src/Dice.s: src/Dice.cpp.s
-
-.PHONY : src/Dice.s
-
-# target to generate assembly for a file
-src/Dice.cpp.s:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Dice.cpp.s
-.PHONY : src/Dice.cpp.s
-
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -257,33 +203,6 @@ src/GameBoard.s: src/GameBoard.cpp.s
 src/GameBoard.cpp.s:
 	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/GameBoard.cpp.s
 .PHONY : src/GameBoard.cpp.s
-
-src/Human.o: src/Human.cpp.o
-
-.PHONY : src/Human.o
-
-# target to build an object file
-src/Human.cpp.o:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Human.cpp.o
-.PHONY : src/Human.cpp.o
-
-src/Human.i: src/Human.cpp.i
-
-.PHONY : src/Human.i
-
-# target to preprocess a source file
-src/Human.cpp.i:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Human.cpp.i
-.PHONY : src/Human.cpp.i
-
-src/Human.s: src/Human.cpp.s
-
-.PHONY : src/Human.s
-
-# target to generate assembly for a file
-src/Human.cpp.s:
-	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Human.cpp.s
-.PHONY : src/Human.cpp.s
 
 src/LateralBox.o: src/LateralBox.cpp.o
 
@@ -405,21 +324,12 @@ help:
 	@echo "... src/AngularBox.o"
 	@echo "... src/AngularBox.i"
 	@echo "... src/AngularBox.s"
-	@echo "... src/Bot.o"
-	@echo "... src/Bot.i"
-	@echo "... src/Bot.s"
-	@echo "... src/Dice.o"
-	@echo "... src/Dice.i"
-	@echo "... src/Dice.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
 	@echo "... src/GameBoard.o"
 	@echo "... src/GameBoard.i"
 	@echo "... src/GameBoard.s"
-	@echo "... src/Human.o"
-	@echo "... src/Human.i"
-	@echo "... src/Human.s"
 	@echo "... src/LateralBox.o"
 	@echo "... src/LateralBox.i"
 	@echo "... src/LateralBox.s"
