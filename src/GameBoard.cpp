@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #include "GameBoard.h"
 
 namespace monopoly   	

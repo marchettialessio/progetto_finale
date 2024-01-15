@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #ifndef MONOPOLY_GAMEBOARD_H_
 #define MONOPOLY_GAMEBOARD_H_
 

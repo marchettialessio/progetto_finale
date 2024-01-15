@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Matteo Milan
+ * 
+ */
+
 #include "Game.h"
 #include <iostream>
 

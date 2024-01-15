@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Matteo Milan
+ * 
+ */
+
 #include "Player.h"
 
 namespace monopoly   	

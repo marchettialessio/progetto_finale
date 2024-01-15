@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Alessio Marchetti
+ * 
+ */
+
 #include "Log.h"
 
 namespace monopoly

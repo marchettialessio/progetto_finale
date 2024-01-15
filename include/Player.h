@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Alessio Marchetti
+ * 
+ */
+
 #ifndef MONOPOLY_PLAYER_H_
 #define MONOPOLY_PLAYER_H_
 

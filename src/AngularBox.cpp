@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #include "AngularBox.h"
 
 namespace monopoly   	

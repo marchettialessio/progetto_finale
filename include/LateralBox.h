@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #ifndef MONOPOLY_LATERALBOX_H_
 #define MONOPOLY_LATERALBOX_H_
 

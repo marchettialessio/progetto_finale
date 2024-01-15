@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #ifndef MONOPOLY_BOX_H_
 #define MONOPOLY_BOX_H_
 

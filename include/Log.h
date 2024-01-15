@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Alessio Marchetti
+ * 
+ */
+
 #ifndef MONOPOLY_LOG_
 #define MONOPOLY_LOG_
 

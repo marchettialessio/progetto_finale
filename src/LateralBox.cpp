@@ -1,3 +1,9 @@
+/**
+ *	
+ *	@author Filippo Aghi
+ * 
+ */
+
 #include "LateralBox.h"
 
 namespace monopoly   	
