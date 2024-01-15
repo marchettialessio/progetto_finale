@@ -38,7 +38,7 @@ namespace monopoly
 		 	*	@param other an instance of Player to copy.
 		 	*	=delete against slicing
 			*/
-			Player(const Player& other) = default;
+			Player(const Player& other)= default;
 			
 			/**
 		 	*	Move constructor.
@@ -53,13 +53,13 @@ namespace monopoly
 			* 
 			* 	@param other an instance of Player to assign.
 			*/
-			Player& operator=(const Player& other) = default;
+			Player& operator=(const Player& other)= default;
+			
+			std::string get_name() const { return name_; }
 			
 			int get_balance() const { return balance_; }
 			
 			int get_last_roll() const { return last_roll_; }
-
-			std::string get_name() const { return name_; }
 			
 			bool is_playing() { return balance_ >= 0; }
 			
@@ -79,7 +79,6 @@ namespace monopoly
 			
 			void set_balance(int balance){ balance_= balance; }
 
-			//virtual void play(Dice& current_gameboard) = 0;
 						
 			protected: 
 				unsigned int current_position_;
@@ -96,4 +95,3 @@ namespace monopoly
 }
 
 #endif //MONOPOLY_PLAYER_H_
-
