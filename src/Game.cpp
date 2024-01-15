@@ -12,17 +12,22 @@ namespace monopoly
 		return false;
 	}
 	    
-	unsigned int roll() 
+	unsigned int roll(unsigned int n_dice, unsigned int max_value) 
 	{
-		std::srand(std::time(NULL));
-		unsigned int fist_roll = 1 ;//+ (rand() % 6);
-		unsigned int second_roll = 1 ;//+ (rand() % 6);
-		return fist_roll + second_roll;
+		unsigned int value_roll;
+		
+		for(int i=0; i < n_dice; i++)
+		{
+			value_roll += 1 + (rand() % max_value);
+		}
+		
+		return value_roll;
 	}
 
 	void play_bot(GameBoard& current_gameboard, Player* player)
 	{
-		player->set_last_roll(roll());
+		std::srand(std::time(NULL));
+		player->set_last_roll(roll(2,6));
 		
 		if (player->get_current_position() + player->get_last_roll() >= GameBoard::MAX_SIZE)
 		{
@@ -76,8 +81,8 @@ namespace monopoly
 
 	void play_human(GameBoard& current_gameboard, Player* player)
 	{
-		
-		player->set_last_roll(roll());
+		std::srand(std::time(NULL));
+		player->set_last_roll(roll(2,6));
 		
 		if (player->get_current_position() + player->get_last_roll() >= GameBoard::MAX_SIZE)
 		{
@@ -143,5 +148,26 @@ namespace monopoly
 			return;
 		}
 	}	
+	
+	/*std::vector<int> player_order()
+	{
+		std::vector<int> order;
+		order.resize(NUM_PLAYER, -1);
+		
+		std::srand(std::time(NULL));
+		
+		for(int i=0; i<Gameboard::NUM_PLAYER; i++) //position i in the vector identify the player (0 -> NUM_PLAYER-1)
+		{
+			unsigned int position = NUM_PLAYER - roll(1,NUM_PLAYER);
+			
+			if(order.at(position) == -1)
+			{
+				order.at(position) = i;
+			}
+			else
+			{
+				order.at(roll(1,NUM_PLAYER-1)) = i;
+			}
+		}
+	}*/ //DA TERMINARE
 }
-
