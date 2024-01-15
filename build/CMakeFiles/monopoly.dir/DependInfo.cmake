@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alessio/Desktop/uni/git/progetto_finale/src/AngularBox.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/AngularBox.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/Bot.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Bot.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/Dice.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Dice.cpp.o"
+  "/home/alessio/Desktop/uni/git/progetto_finale/src/Game.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Game.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/GameBoard.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/GameBoard.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/Human.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/Human.cpp.o"
   "/home/alessio/Desktop/uni/git/progetto_finale/src/LateralBox.cpp" "/home/alessio/Desktop/uni/git/progetto_finale/build/CMakeFiles/monopoly.dir/src/LateralBox.cpp.o"

@@ -6,47 +6,11 @@
 
 #IncludeRegexTransform: 
 
-../include/AngularBox.h
-ostream
--
-Box.h
-../include/Box.h
-
-../include/Box.h
-iostream
--
+../include/Log.h
 string
 -
-
-../include/Dice.h
-ostream
+fstream
 -
-
-../include/GameBoard.h
-iostream
--
-vector
--
-cstdlib
--
-ctime
--
-memory
--
-AngularBox.h
-../include/AngularBox.h
-LateralBox.h
-../include/LateralBox.h
-
-../include/LateralBox.h
-ostream
--
-vector
--
-Player.h
-../include/Player.h
-Box.h
-../include/Box.h
 Player.h
 ../include/Player.h
 
@@ -56,13 +20,7 @@ ostream
 string
 -
 
-/home/alessio/Desktop/uni/git/progetto_finale/src/main.cpp
-GameBoard.h
-/home/alessio/Desktop/uni/git/progetto_finale/src/GameBoard.h
-Dice.h
-/home/alessio/Desktop/uni/git/progetto_finale/src/Dice.h
-unistd.h
--
-iostream
--
+/home/alessio/Desktop/uni/git/progetto_finale/src/Log.cpp
+Log.h
+/home/alessio/Desktop/uni/git/progetto_finale/src/Log.h
 

@@ -19,6 +19,7 @@ set(SOURCE_FILES
 	src/Human.cpp
 	src/Bot.cpp
 	src/Log.cpp
+	src/Game.cpp
 )
 
 

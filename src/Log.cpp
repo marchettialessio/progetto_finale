@@ -59,7 +59,7 @@ namespace monopoly
     void Log::write_on_file(std::string string)
     {
         std::ofstream myfile;
-        myfile.open("Log.txt");
+        myfile.open("../log.txt", std::ios::app);
         myfile << string << std::endl;
         myfile.close();
         return;

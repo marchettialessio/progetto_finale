@@ -204,6 +204,33 @@ src/Dice.cpp.s:
 	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Dice.cpp.s
 .PHONY : src/Dice.cpp.s
 
+src/Game.o: src/Game.cpp.o
+
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/monopoly.dir/build.make CMakeFiles/monopoly.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
 src/GameBoard.o: src/GameBoard.cpp.o
 
 .PHONY : src/GameBoard.o
@@ -384,6 +411,9 @@ help:
 	@echo "... src/Dice.o"
 	@echo "... src/Dice.i"
 	@echo "... src/Dice.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
 	@echo "... src/GameBoard.o"
 	@echo "... src/GameBoard.i"
 	@echo "... src/GameBoard.s"

@@ -5,6 +5,7 @@
 #include <fstream>
 #include "Player.h"
 
+
 namespace monopoly
 {
 	class Log
