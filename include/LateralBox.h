@@ -96,8 +96,7 @@ namespace monopoly
 			bool is_box_owner(const Player* player) const;
 			
 			bool stay(Player* player); //return true if building_ is Building::house or Building::hotel and the payment is possible, false instead
-			
-			
+				
 			std::string show_box() const override;
 			
 		private:

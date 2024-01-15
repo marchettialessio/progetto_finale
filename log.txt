@@ -1,7 +1,7 @@
 Player Player_1 rolled the dice and got a value of -5253594
 Player Player_1 arrived at the box -10
-Player Player_1 rolled the dice and got a value of -1700137435
 Player Player_1 arrived at the box -3
+Player Player_1 rolled the dice and got a value of -1700137435
 Player Player_1 rolled the dice and got a value of -816462303
 Player Player_1 arrived at the box -27
 Player Player_1 rolled the dice and got a value of -378972634
