@@ -184,26 +184,32 @@ namespace monopoly
 		Log::log_game_over(player->get_name());
 	}
 
-	/*std::vector<int> player_order()
+	
+	std::vector<int> player_order()
 	{
 		std::vector<int> order;
-		order.resize(NUM_PLAYER, -1);
-
+		order.resize(GameBoard::NUM_PLAYER, -1);
+		
 		std::srand(std::time(NULL));
-
-		for(int i=0; i<Gameboard::NUM_PLAYER; i++) //position i in the vector identify the player (0 -> NUM_PLAYER-1)
+		
+		for(int i=0; i<GameBoard::NUM_PLAYER; i++) //position i in the vector identify the player position (0 -> NUM_PLAYER-1)
 		{
-			unsigned int position = NUM_PLAYER - roll(1,NUM_PLAYER);
-
+			unsigned int position = GameBoard::NUM_PLAYER - roll(1,GameBoard::NUM_PLAYER);
+			
 			if(order.at(position) == -1)
 			{
-				order.at(position) = i;
+				order.at(position) = i;	//i is the player in taht position (ex. player 3 in first position: i=2, position=0)
 			}
 			else
 			{
-				order.at(roll(1,NUM_PLAYER-1)) = i;
+				while(order.at(position) != -1)
+				{
+					position = GameBoard::NUM_PLAYER - roll(1,GameBoard::NUM_PLAYER);
+				}
+				order.at(position) = i;	
 			}
 		}
-	}*/
-	// DA TERMINARE
+		
+		return order;
+	}
 }
