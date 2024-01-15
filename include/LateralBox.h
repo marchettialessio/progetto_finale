@@ -6,7 +6,6 @@
 
 #include "Player.h"
 #include "Box.h"
-#include "Player.h"
 
 namespace monopoly   	
 {
@@ -52,7 +51,7 @@ namespace monopoly
 			/**
 			*	Destructor.
 			*/
-			~LateralBox() override { delete owner_ ; }
+			~LateralBox() override { }
 			
 			/**
 		 	*	Copy constructor.
@@ -78,10 +77,10 @@ namespace monopoly
 			Category get_category() const { return category_; }
 			
 			Building get_building() const { return building_; }
-
-			Player* get_owner() const {return owner_;};
-	
+			
 			int get_price(const int type) const;
+			
+			Player* get_owner() const {return owner_;};
 			
 			bool sell(Player* owner); //sell the box
 			
@@ -96,7 +95,8 @@ namespace monopoly
 			bool is_box_owner(const Player* player) const;
 			
 			bool stay(Player* player); //return true if building_ is Building::house or Building::hotel and the payment is possible, false instead
-				
+			
+			
 			std::string show_box() const override;
 			
 		private:

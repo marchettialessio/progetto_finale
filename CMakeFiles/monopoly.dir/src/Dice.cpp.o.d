@@ -1,7 +1,6 @@
-CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: \
- /home/cobr3x/C++/Monopoly\ Test/src/LateralBox.cpp \
- /usr/include/stdc-predef.h \
- /home/cobr3x/C++/Monopoly\ Test/include/LateralBox.h \
+CMakeFiles/monopoly.dir/src/Dice.cpp.o: \
+ /home/cobr3x/C++/Monopoly\ Test/src/Dice.cpp /usr/include/stdc-predef.h \
+ /home/cobr3x/C++/Monopoly\ Test/include/Dice.h \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
  /usr/include/i386-linux-gnu/c++/11/bits/c++config.h \
@@ -145,12 +144,4 @@ CMakeFiles/monopoly.dir/src/LateralBox.cpp.o: \
  /usr/include/i386-linux-gnu/c++/11/bits/ctype_inline.h \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
- /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/cobr3x/C++/Monopoly\ Test/include/Player.h \
- /home/cobr3x/C++/Monopoly\ Test/include/Box.h \
- /usr/include/c++/11/iostream /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/ostream.tcc

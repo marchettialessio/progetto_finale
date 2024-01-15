@@ -62,7 +62,7 @@ namespace monopoly
 	}
 	
 	bool LateralBox::sell(Player* owner)
-	{				
+	{						
 		if(owner != nullptr && owner->decrease_balance(price_[(int) Price::lot_price]))
 		{
 			if(owner_ != nullptr)

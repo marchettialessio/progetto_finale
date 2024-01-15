@@ -49,3 +49,4 @@ namespace monopoly
 	
 	std::ostream& operator<<(std::ostream& out, const AngularBox& other) { return out << "LateralBox: " << other.show_box(); } 
 }
+

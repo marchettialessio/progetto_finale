@@ -71,7 +71,7 @@ namespace monopoly
 				player->set_in_game(false);
 				Log::log_game_over(player->get_name());
 				Log::log_loser(player->get_name());
-				return; //
+				return; 
 			}
 			Log::log_overnight_stay(player->get_name(), dynamic_cast<LateralBox *>(current_box)->get_owner()->get_name(), 
 			dynamic_cast<LateralBox *>(current_box)->get_price((int)dynamic_cast<LateralBox *>(current_box)->get_category()), 
@@ -231,7 +231,7 @@ namespace monopoly
 		return order;
 	}
 	
-	/*int winner(std::vector<Player*> player)
+	int winner(std::vector<Player*> player)
 	{
 		for(int i=1; j<player.size(); j++)
 		{
@@ -242,7 +242,6 @@ namespace monopoly
 			gameboard.show_gameboard();
 			usleep(305000);
 		}
-	}*/
+	}
 }
-
 

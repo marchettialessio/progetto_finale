@@ -1,5 +1,6 @@
 CMakeFiles/monopoly.dir/src/main.cpp.o: \
  /home/cobr3x/C++/Monopoly\ Test/src/main.cpp /usr/include/stdc-predef.h \
+ /home/cobr3x/C++/Monopoly\ Test/include/Game.h \
  /home/cobr3x/C++/Monopoly\ Test/include/GameBoard.h \
  /usr/include/c++/11/iostream \
  /usr/include/i386-linux-gnu/c++/11/bits/c++config.h \
@@ -115,13 +116,15 @@ CMakeFiles/monopoly.dir/src/main.cpp.o: \
  /usr/include/i386-linux-gnu/sys/select.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/types/sigset_t.h /usr/include/alloca.h \
+ /usr/include/i386-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/i386-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstdio \
  /usr/include/stdio.h /usr/include/i386-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/i386-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/i386-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/i386-linux-gnu/bits/types/cookie_io_functions_t.h \
- /usr/include/i386-linux-gnu/bits/stdio_lim.h /usr/include/c++/11/cerrno \
+ /usr/include/i386-linux-gnu/bits/stdio_lim.h \
+ /usr/include/i386-linux-gnu/bits/stdio.h /usr/include/c++/11/cerrno \
  /usr/include/errno.h /usr/include/i386-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/i386-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -148,18 +151,37 @@ CMakeFiles/monopoly.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/ctime \
- /usr/include/c++/11/iomanip /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
- /usr/include/i386-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/i386-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
- /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h \
  /home/cobr3x/C++/Monopoly\ Test/include/AngularBox.h \
  /home/cobr3x/C++/Monopoly\ Test/include/Box.h \
  /home/cobr3x/C++/Monopoly\ Test/include/LateralBox.h \
- /home/cobr3x/C++/Monopoly\ Test/include/Player.h
+ /home/cobr3x/C++/Monopoly\ Test/include/Player.h \
+ /home/cobr3x/C++/Monopoly\ Test/include/Log.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/i386-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/i386-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/unistd.h \
+ /usr/include/i386-linux-gnu/bits/posix_opt.h \
+ /usr/include/i386-linux-gnu/bits/environments.h \
+ /usr/include/i386-linux-gnu/bits/confname.h \
+ /usr/include/i386-linux-gnu/bits/getopt_posix.h \
+ /usr/include/i386-linux-gnu/bits/getopt_core.h \
+ /usr/include/i386-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc

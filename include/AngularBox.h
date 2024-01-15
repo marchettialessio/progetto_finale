@@ -28,7 +28,7 @@ namespace monopoly
 			/**
 			*	Destructor.
 			*/
-			~AngularBox() override = default;
+			~AngularBox() override = default; //no dangling pointer
 			
 			/**
 		 	*	Copy constructor.
@@ -51,10 +51,6 @@ namespace monopoly
 			*/
 			AngularBox& operator=(const AngularBox& other);
 			
-			/**
-			* 
-			* 	@return the amount of the bonus when a player pass by the start
-			*/
 			unsigned int start_bonus() const { return start_bonus_; }
 			
 			std::string show_box() const override;

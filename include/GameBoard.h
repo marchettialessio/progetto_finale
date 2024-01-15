@@ -65,8 +65,6 @@ namespace monopoly
 			bool is_angular_box(int position) const;
 			
 			Box* get_box(int position);
-
-			Player* get_player(int position);
 			
 			static constexpr int MAX_SIZE = 28; //must be divisible by 4
 			static constexpr int START = 0;

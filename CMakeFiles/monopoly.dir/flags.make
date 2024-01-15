@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/home/cobr3x/C++/Monopoly Test/include"
 
-CXX_FLAGS = -std=gnu++11
+CXX_FLAGS = -O2 -std=gnu++11
 
