@@ -15,9 +15,6 @@ set(SOURCE_FILES
 	src/LateralBox.cpp
 	src/AngularBox.cpp
 	src/GameBoard.cpp
-	src/Dice.cpp
-	src/Human.cpp
-	src/Bot.cpp
 	src/Log.cpp
 	src/Game.cpp
 )
