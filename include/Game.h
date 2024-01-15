@@ -45,8 +45,11 @@ namespace monopoly
 	 */
 	void play_human(GameBoard& current_gameboard, Player* player);
 	
+	int winner(std::vector<Player*> player);
+	
 	std::vector<int> player_order();
 			
 }
 
 #endif //MONOPOLY_GAME_H_
+

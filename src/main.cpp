@@ -14,7 +14,7 @@ using namespace monopoly;
 int main(int argc, char *argv[])
 {
 
-	constexpr int MAX_ROUND = 20;
+	constexpr int MAX_ROUND = 20; //max number of round 
 	
 	std::vector<Player*> player = {new Player("Player_1", 100), new Player("Player_2", 100), new Player("Player_3", 100), new Player("Player_4", 100)};
 
@@ -41,8 +41,6 @@ int main(int argc, char *argv[])
 			std::system("clear");
 			gameboard.show();
 			usleep(15000);
-			
-			cout << "\033[1;31mBot Win!\033[0m\n";
 		}
 	}
 	
@@ -74,6 +72,9 @@ int main(int argc, char *argv[])
 			usleep(15000);
 		}
 	}
+	
+	cout << endl;
+	cout << "\033[1;31mWinner is player: \033[0m" << winner(player)+1 << endl;
 	
 	//destroyer of player pointer
 	for(int i=0; i<4; i++)

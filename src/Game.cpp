@@ -247,17 +247,21 @@ namespace monopoly
 
 		return order;
 	}
-
-	// int winner(std::vector<Player *> player)
-	// {
-	// 	for (int i = 1; j < player.size(); j++)
-	// 	{
-	// 		if (player.at(order.at(j))->is_in_game_())
-	// 			play_bot(gameboard, player.at(order.at(j)));
-
-	// 		std::system("clear");
-	// 		gameboard.show_gameboard();
-	// 		usleep(305000);
-	// 	}
-	// }
+	
+	int winner(std::vector<Player*> player)
+	{
+		int winner = 0;
+		int winner_balance = player.at(0)->get_balance();
+		
+		for(int i=1; i<player.size(); i++)
+		{
+			if(player.at(i)->get_balance() > winner_balance)
+			{
+				winner_balance = player.at(i)->get_balance();
+				winner = i;
+			}
+		}
+		
+		return winner;
+	}
 }
