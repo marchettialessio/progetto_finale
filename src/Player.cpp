@@ -5,8 +5,6 @@ namespace monopoly
 	Player::Player() : balance_{DEFAULT_BALANCE}, name_{"none"}, current_position_{0} {}
 
 	Player::Player(const std::string& name, int balance) : balance_{balance}, name_{name}, current_position_{0} {} 
-
-	
 	
 	void Player::increment_balance(const int amount)
 	{
@@ -25,5 +23,9 @@ namespace monopoly
 	}
 
 
-	std::ostream& operator<<(std::ostream& out, const Player& other) {return out << "";} //redefinition
+	std::ostream& operator<<(std::ostream& out, const Player& other) 
+	{
+		return out << "Name: " << other.get_name() << " balance: " << other.get_balance() << std::endl;
+	}
+	
 }
